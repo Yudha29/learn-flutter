@@ -1,33 +1,15 @@
 main() {
-  int a = 10;
-
-  print('a : $a');
+  /**
+   * For loop
+   * for (initial; condition; step) {
+   *  //statement
+   * }
+   */
 
   /**
-   * IF statement
+   * print i when the i is less than 10
    */
-  if (a > 5) {
-    print('$a is greater than 5'); //this condition will true
-  } else if (a < 5) {
-    print('$a is less than 5');
-  } else {
-    print('$a is equal to 5');
-  }
-
-  /**
-   * Switch case
-   */
-  switch (a) {
-    case 1:
-      print('$a is equal to 1');
-      break;
-    case 10:
-      print('$a is equal to 10');
-      break;
-    case 20:
-      print('$a is equal to 20');
-      break;
-    default:
-      print('$a is not equal to 1, 10 or 20');
+  for (int i = 0; i < 10; i++) {
+    print(i); //will be executed 10 times
   }
 }
