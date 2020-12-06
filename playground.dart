@@ -1,53 +1,27 @@
-//Map
+//Spead-Operator
 main() {
   /**
-   * map
-   * map is an object that associates keys and value
-   * the key in a map must be unique
-   * but the value not has to be unique
+   * Spread operator
+   * used to spread all value
+   * inside list, set or map
    */
 
-  //define map
-  var bio = {'firstname': 'Yudha', 'lastname': 'Nawawi', 'hobby': 'Reading'};
+  List<int> primaryNumbers = [1, 3, 5, 7];
+  List<int> numbers = [2, 4, 6, 8];
 
-  //get the number of element
-  assert(bio.length == 3);
-
-  //ensure the lastname is 'Nawawi'
-  assert(bio['lastname'] == 'Nawawi');
-
-  //add new key and value
-  bio['gender'] = 'Male';
-
-  //verify the value of key gender is Male;
-  assert(bio['gender'] == 'Male');
-
-  //the default value of key that isnt in map is null
-  assert(bio['Job'] == null);
-
-  //use toString to convert map to string
-  print('My Bio : ' + bio.toString());
+  print('primaryNumbers : ' + primaryNumbers.toString());
+  print('numbers : ' + numbers.toString());
+  //add primaryNumbers to numbers
+  numbers = [...numbers, ...primaryNumbers];
+  print('numbers after merging : ' + numbers.toString());
+  //you can also make a copy of numbers list
+  var copyOfNumbers = [...numbers];
+  print('copyOfNumbers before modification : ' + copyOfNumbers.toString());
+  copyOfNumbers[2] = 9;
+  print('copyOfNumbers after modification : ' + copyOfNumbers.toString());
+  print('numbers after merging : ' + numbers.toString());
 
   /**
-   * Use map constructor
-   * to construct the map
+   * Spread operator also work for set and map
    */
-
-  Map population = Map();
-  population['China'] = 1394015977;
-  population['India'] = 1326093247;
-  population['United States'] = 329877505;
-
-  assert(population['India'] == 1326093247);
-
-  population.forEach((key, value) => print('Population in $key is $value'));
-
-  /**
-   * Constant map
-   */
-
-  var constMap = const {'constprops1': 'val1', 'constprops2': 'val2'};
-
-  //try to add new key and value will make an error
-  //constMap['newKey'] = 'newValue';
 }
