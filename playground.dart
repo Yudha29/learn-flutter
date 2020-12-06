@@ -74,6 +74,13 @@ main() {
   int valOfNumber;
   valOfNumber ??= 1; //set value if valOfNumber is null
   print('set valOfNumber from null to $valOfNumber');
+
+  /**
+   * Ternary Operator
+   * condition ? val1 : val2;
+   */
+  String answer = (a % 2 != 0) ? 'Odd' : 'Even';
+  print('$a is $answer');
 }
 
 class Number {
