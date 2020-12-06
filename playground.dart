@@ -1,8 +1,9 @@
-//list
+//set
 main() {
   /**
-   * List is just array
-   * in other programming language
+   * Set
+   * the element of set cannot be change
+   * each element must be unique
    */
 
   //define set with type of string
