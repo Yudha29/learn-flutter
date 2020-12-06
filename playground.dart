@@ -1,61 +1,53 @@
-//set
+//Map
 main() {
   /**
-   * Set
-   * the element of set cannot be change
-   * each element must be unique
+   * map
+   * map is an object that associates keys and value
+   * the key in a map must be unique
+   * but the value not has to be unique
    */
 
-  //define set with type of string
-  Set<String> flowers = {'rose', 'jasmine'};
+  //define map
+  var bio = {'firstname': 'Yudha', 'lastname': 'Nawawi', 'hobby': 'Reading'};
 
   //get the number of element
-  assert(flowers.length == 2);
+  assert(bio.length == 3);
 
-  //is the 2nd element is jasmine
-  assert(flowers.elementAt(1) == 'jasmine');
+  //ensure the lastname is 'Nawawi'
+  assert(bio['lastname'] == 'Nawawi');
 
-  //add value to set
-  flowers.add('violet');
+  //add new key and value
+  bio['gender'] = 'Male';
 
-  //verify the value of 3rd element is violet;
-  assert(flowers.elementAt(2) == 'violet');
+  //verify the value of key gender is Male;
+  assert(bio['gender'] == 'Male');
 
-  //use toString to convert set to string
-  print('flowers set : ' + flowers.toString());
+  //the default value of key that isnt in map is null
+  assert(bio['Job'] == null);
 
-  /**
-   * Constant Set
-   * to create Set that compile time const
-   * add const keyword before the set literal
-   */
-
-  Set<String> otherFlowers = const {'Tulip', 'Orchid'};
-
-  //trying to add element will throw an error
-  // otherFlowers.add('Bugenvil');
-
-  //use toString to convert list to string
-  print('otherFlowers set : ' + otherFlowers.toString());
+  //use toString to convert map to string
+  print('My Bio : ' + bio.toString());
 
   /**
-   * use addAll method to
-   * add all element in other set/list
-   * to a set
+   * Use map constructor
+   * to construct the map
    */
 
-  flowers.addAll(otherFlowers);
+  Map population = Map();
+  population['China'] = 1394015977;
+  population['India'] = 1326093247;
+  population['United States'] = 329877505;
 
-  print('add otherFlowers set to flowers set');
-  print('flowers : ' + flowers.toString());
+  assert(population['India'] == 1326093247);
 
-  var popularFlowers = ['Lotus'];
+  population.forEach((key, value) => print('Population in $key is $value'));
 
-  print('popularFlowers list : ' + popularFlowers.toString());
+  /**
+   * Constant map
+   */
 
-  //add popularFlowers list to flowers set
-  flowers.addAll(popularFlowers);
+  var constMap = const {'constprops1': 'val1', 'constprops2': 'val2'};
 
-  print('add popular flowers list to flowers set');
-  print('flowers : ' + flowers.toString());
+  //try to add new key and value will make an error
+  //constMap['newKey'] = 'newValue';
 }
