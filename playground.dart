@@ -1,51 +1,39 @@
+//list
 main() {
   /**
-   * Break
-   * used to stop the loop
+   * List is just array
+   * in other programming language
    */
 
-  int i = 0;
+  //define list
+  var list = [1, 2, 3, 4, 5];
 
-  print('Stop the loop when i equal to 5');
-  /**
-   * loop as long as i 
-   * is less than 10
-   */
-  while (i < 10) {
-    //if i equal to 5
-    if (i == 5) {
-      //stop the loop
-      break;
-    }
+  //get the number of element
+  assert(list.length == 5);
 
-    //print value of i
-    print(i);
+  //is the fourth element is 4
+  assert(list[3] == 4);
 
-    //increment i
-    //ensure the loop
-    //not to be infite
-    i++;
-  }
+  //set the value of fifth element to 6
+  list[4] = 6;
+
+  //verify the value of 5th element is 6
+  assert(list[4] == 6);
+
+  //use toString to convert list to string
+  print(list.toString());
 
   /**
-   * Continue
-   * skip a loop
+   * Constant List
+   * to create list that compile time const
+   * add const keyword before the list literal
    */
 
-  print('\nSkip the loop when i is odd');
+  var cars = const ['BMW', 'Mercedes', 'Audi'];
 
-  /**
-   * loop as long as i 
-   * is less than 10
-   */
-  for (i = 0; i < 10; i++) {
-    //if i is odd
-    if (i % 2 != 0) {
-      //skip the loop
-      continue;
-    }
+  //trying to modify element will throw an error
+  //cars[2] = 'Toyota';
 
-    //print value of i
-    print(i);
-  }
+  //use toString to convert list to string
+  print(cars.toString());
 }
