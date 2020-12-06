@@ -1,24 +1,23 @@
 main() {
   /**
-   * while()
-   * While will loop 
-   * as long as the condition
-   * is true
-   * 
-   * syntax
-   * while(condition) {
-   *   //statement
-   * }
+   * Break
+   * used to stop the loop
    */
 
   int i = 0;
 
-  print('While | $i to 9');
+  print('Stop the loop when i equal to 5');
   /**
    * loop as long as i 
    * is less than 10
    */
   while (i < 10) {
+    //if i equal to 5
+    if (i == 5) {
+      //stop the loop
+      break;
+    }
+
     //print value of i
     print(i);
 
@@ -29,25 +28,24 @@ main() {
   }
 
   /**
-   * do .. while();
-   * Do While will loop 
-   * as long as the condition
-   * is true
-   * 
-   * The difference betwen while
-   * and do while is the do while
-   * will execute the statement 1x
-   * before check the condition
+   * Continue
+   * skip a loop
    */
 
-  print('\nDo While | $i to 0');
-  do {
-    //print the value of i
-    print(i);
+  print('\nSkip the loop when i is odd');
 
-    //ensure loop will infinte
-    //by decrement the value of
-    //i in every loop
-    i--;
-  } while (i >= 0);
+  /**
+   * loop as long as i 
+   * is less than 10
+   */
+  for (i = 0; i < 10; i++) {
+    //if i is odd
+    if (i % 2 != 0) {
+      //skip the loop
+      continue;
+    }
+
+    //print value of i
+    print(i);
+  }
 }
