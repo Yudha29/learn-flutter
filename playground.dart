@@ -1,27 +1,34 @@
-//Spead-Operator
+//Control Flow Collection
 main() {
   /**
-   * Spread operator
-   * used to spread all value
-   * inside list, set or map
+   * Control Flow Collection
+   * there are two controlflow collection
+   * which is if and for
    */
 
-  List<int> primaryNumbers = [1, 3, 5, 7];
-  List<int> numbers = [2, 4, 6, 8];
+  List<String> names = ['Yudha', 'Jaya', 'Henry'];
 
-  print('primaryNumbers : ' + primaryNumbers.toString());
-  print('numbers : ' + numbers.toString());
-  //add primaryNumbers to numbers
-  numbers = [...numbers, ...primaryNumbers];
-  print('numbers after merging : ' + numbers.toString());
-  //you can also make a copy of numbers list
-  var copyOfNumbers = [...numbers];
-  print('copyOfNumbers before modification : ' + copyOfNumbers.toString());
-  copyOfNumbers[2] = 9;
-  print('copyOfNumbers after modification : ' + copyOfNumbers.toString());
-  print('numbers after merging : ' + numbers.toString());
+  List<String> otherNames = [
+    'Denny',
+    'Stevanus',
+    'Richmond',
+    //if the type of nems is List<String> than add names to othernames
+    if (names is List<String>) ...names
+  ];
+
+  print('all names : ' + otherNames.toString());
+
+  List<String> otherNewNames = [
+    '# Michael',
+    '# Yudi',
+    '# Andri',
+    //use for loop and modify collection element before add it
+    for (String name in names) '# $name'
+  ];
+
+  print('all names now : ' + otherNewNames.toString());
 
   /**
-   * Spread operator also work for set and map
+   * Control flow collection also work for set and map
    */
 }
