@@ -1,18 +1,17 @@
-/**
- * import for dart:core will be imported automatically
- * so i dont have to write it in my code
- */
-//import 'dart:core';
+///import library for input/output
+import 'dart:io';
 
 main() {
-  /**
-   * use var will use type inference for the value
-   * for this example the type of firstname will be string
-   * because i put string value to it
-   */
-  var firstName = 'Yudha';
-  String lastName = 'Nawawi';
+  ///stdout.writeln
+  ///used to print something
+  ///to the screen
+  stdout.writeln('What is your name: ?');
 
-  //use + to concat string
-  print(firstName + ' ' + lastName);
+  ///stdin.readLineSync
+  ///used to get input form user
+  String name = stdin.readLineSync();
+
+  ///use $ to do
+  ///string interpolation
+  print('My name is $name');
 }
