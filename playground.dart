@@ -1,23 +1,21 @@
 main() {
   /**
-   * For in
+   * forEach()
+   * Foreach will loop the element of array
+   * then call the higher order function every loop
+   * and pass the element to higher order function's
+   * argument
    * 
-   * For in will loop all 
-   * element in array
-   * 
-   * syntax:
-   * for in (int i in array) {
-   *  
-   * }
+   * syntax
+   * arr.forEach((element) => {
+   *  //statement
+   * })
    */
 
   var a = [1, 2, 3, 4, 5];
 
-  /**
-   * Print all element
-   * in array a
-   */
-  for (int i in a) {
-    print(i); //print each element one by one
-  }
+  //print all element in array a
+  a.forEach((element) {
+    print(element);
+  });
 }
