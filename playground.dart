@@ -1,15 +1,23 @@
 main() {
   /**
-   * For loop
-   * for (initial; condition; step) {
-   *  //statement
+   * For in
+   * 
+   * For in will loop all 
+   * element in array
+   * 
+   * syntax:
+   * for in (int i in array) {
+   *  
    * }
    */
 
+  var a = [1, 2, 3, 4, 5];
+
   /**
-   * print i when the i is less than 10
+   * Print all element
+   * in array a
    */
-  for (int i = 0; i < 10; i++) {
-    print(i); //will be executed 10 times
+  for (int i in a) {
+    print(i); //print each element one by one
   }
 }
