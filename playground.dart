@@ -5,35 +5,56 @@ main() {
    * in other programming language
    */
 
-  //define list
-  var list = [1, 2, 3, 4, 5];
+  //define set with type of string
+  Set<String> flowers = {'rose', 'jasmine'};
 
   //get the number of element
-  assert(list.length == 5);
+  assert(flowers.length == 2);
 
-  //is the fourth element is 4
-  assert(list[3] == 4);
+  //is the 2nd element is jasmine
+  assert(flowers.elementAt(1) == 'jasmine');
 
-  //set the value of fifth element to 6
-  list[4] = 6;
+  //add value to set
+  flowers.add('violet');
 
-  //verify the value of 5th element is 6
-  assert(list[4] == 6);
+  //verify the value of 3rd element is violet;
+  assert(flowers.elementAt(2) == 'violet');
 
-  //use toString to convert list to string
-  print(list.toString());
+  //use toString to convert set to string
+  print('flowers set : ' + flowers.toString());
 
   /**
-   * Constant List
-   * to create list that compile time const
-   * add const keyword before the list literal
+   * Constant Set
+   * to create Set that compile time const
+   * add const keyword before the set literal
    */
 
-  var cars = const ['BMW', 'Mercedes', 'Audi'];
+  Set<String> otherFlowers = const {'Tulip', 'Orchid'};
 
-  //trying to modify element will throw an error
-  //cars[2] = 'Toyota';
+  //trying to add element will throw an error
+  // otherFlowers.add('Bugenvil');
 
   //use toString to convert list to string
-  print(cars.toString());
+  print('otherFlowers set : ' + otherFlowers.toString());
+
+  /**
+   * use addAll method to
+   * add all element in other set/list
+   * to a set
+   */
+
+  flowers.addAll(otherFlowers);
+
+  print('add otherFlowers set to flowers set');
+  print('flowers : ' + flowers.toString());
+
+  var popularFlowers = ['Lotus'];
+
+  print('popularFlowers list : ' + popularFlowers.toString());
+
+  //add popularFlowers list to flowers set
+  flowers.addAll(popularFlowers);
+
+  print('add popular flowers list to flowers set');
+  print('flowers : ' + flowers.toString());
 }
