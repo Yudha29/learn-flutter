@@ -2,27 +2,41 @@
 
 main() {
   /**
-   * String can be construct with single/double quote
+   * convert
+   * string '1' to integer 1
    */
+  var one = int.parse('1');
+  /**
+   * verify if the value of one
+   * is equal to 1
+   * 
+   * assert() will throw error if 
+   * one is not equal to 1
+   */
+  assert(one == 1);
 
-  //single quote
-  String text = 'You are good person';
-  String text2 = 'it\'s a dog'; //use \ (backslash) to escape ' character
+  /**
+   * Convert
+   * String '1.1' to double 1.1
+   */
+  var onePointOne = double.parse('1.1');
+  assert(onePointOne == 1.1);
 
-  //double quote
-  String text3 = "You are good person";
-  String text4 = "it's a dog";
+  /**
+   * Convert 
+   * Double 1.1 to String '1.1'
+   */
+  var doubleStr = 1.1.toString();
+  assert(doubleStr == '1.1');
 
-  print('String with single quote');
-  print(text);
-  print(text2);
-  print("\nString with double quote");
-  print(text3);
-  print(text4);
+  var doubleStrFix =
+      1.1111111.toStringAsFixed(2); //specify digit behind the coma
+  assert(doubleStrFix == '1.11');
 
-  //with raw string, special character will not treated
-  String rawString = r'Hello \n Yes'; //the \n will be printed to the screen
-
-  print('\nRaw String');
-  print(rawString);
+  /**
+   * Convert 
+   * Integer 1 to String '1'
+   */
+  var intStr = 1.toString();
+  assert(intStr == '1');
 }
