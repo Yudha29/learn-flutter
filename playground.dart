@@ -25,4 +25,16 @@ main() {
 
   print('\nRaw String');
   print(rawString);
+
+  String multiStr = """
+  \nThis is multiline string 
+with three double quote
+  """;
+
+  String multiStr2 = """This is multiline string 
+with three single quote
+  """;
+
+  print(multiStr);
+  print(multiStr2);
 }
