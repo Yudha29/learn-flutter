@@ -1,22 +1,22 @@
 main() {
-  const int number = 1; //define int const
-  const bool booelan = true; //define bool const
-  const String text = "String constant"; //define String const
+  //null means the value is blank
 
   /**
-   * Print the value and 
-   * the type of constant
-   * at run time
+   * for example define variable 
+   * without a value
+   * 
+   * the default value will null
    */
-  print(number);
-  //property runtimeType used to get the type of variable at runtime
-  print(number.runtimeType);
+  int number;
 
-  print('\n');
-  print(booelan);
-  print(booelan.runtimeType);
+  print("\Implicit Null");
+  print(number); // print null to screen
 
-  print('\n');
-  print(text);
-  print(text.runtimeType);
+  /**
+   * We can also set variable to null explicitly
+   */
+  int number2 = null;
+
+  print("\nExplicit Null");
+  print(number2); //also print null
 }
