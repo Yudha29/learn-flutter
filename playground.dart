@@ -1,34 +1,21 @@
-//Control Flow Collection
+//Function
 main() {
   /**
-   * Control Flow Collection
-   * there are two controlflow collection
-   * which is if and for
+   * Function
+   * in dart functions are object
+   * so we can pass function to 
+   * variable or as parameter for
+   * other function
    */
 
-  List<String> names = ['Yudha', 'Jaya', 'Henry'];
+  List<String> names = ['Edo', 'Karunia', 'Tonny'];
 
-  List<String> otherNames = [
-    'Denny',
-    'Stevanus',
-    'Richmond',
-    //if the type of nems is List<String> than add names to othernames
-    if (names is List<String>) ...names
-  ];
+  print('Is Karunia in list ' +
+      names.toString() +
+      ' : ' +
+      inList(names, 'Karunia').toString());
+}
 
-  print('all names : ' + otherNames.toString());
-
-  List<String> otherNewNames = [
-    '# Michael',
-    '# Yudi',
-    '# Andri',
-    //use for loop and modify collection element before add it
-    for (String name in names) '# $name'
-  ];
-
-  print('all names now : ' + otherNewNames.toString());
-
-  /**
-   * Control flow collection also work for set and map
-   */
+bool inList(List<String> list, String val) {
+  return list.where((element) => element == val).length > 0;
 }
