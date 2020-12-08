@@ -1,21 +1,24 @@
-//Function
+//Named Parameters
 main() {
   /**
-   * Function
-   * in dart functions are object
-   * so we can pass function to 
-   * variable or as parameter for
-   * other function
+   * Function's named parameter
+   * named parameter make possible
+   * to call function with a name
+   * 
+   * by default named parameters are
+   * optional unless they're specifically
+   * marked as required
    */
 
-  List<String> names = ['Edo', 'Karunia', 'Tonny'];
+  var text = makeTea(water: 100, sugar: 3);
 
-  print('Is Karunia in list ' +
-      names.toString() +
-      ' : ' +
-      inList(names, 'Karunia').toString());
+  print(text);
 }
 
-bool inList(List<String> list, String val) {
-  return list.where((element) => element == val).length > 0;
+String makeTea({int sugar, int water}) {
+  var text = 'Tea with $water ml water';
+
+  if (sugar != null) text = '$text and $sugar spoons of sugar';
+
+  return text;
 }
