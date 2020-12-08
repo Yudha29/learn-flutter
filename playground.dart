@@ -1,24 +1,30 @@
-//Named Parameters
+//Class
 main() {
   /**
-   * Function's named parameter
-   * named parameter make possible
-   * to call function with a name
-   * 
-   * by default named parameters are
-   * optional unless they're specifically
-   * marked as required
+   * Class
+   * Class in dart can has more than
+   * one constructor
    */
 
-  var text = makeTea(water: 100, sugar: 3);
+  var person = Person('Yudha', 'P');
 
-  print(text);
+  //access property or method using dot
+  print('Name : ' + person.name);
+
+  var personFromJson = Person.fromJson({'name': 'Yudha', 'gender': 'P'});
+
+  print('Name from JSON' + personFromJson.name);
 }
 
-String makeTea({int sugar, int water}) {
-  var text = 'Tea with $water ml water';
+class Person {
+  String name;
+  String gender;
 
-  if (sugar != null) text = '$text and $sugar spoons of sugar';
+  //first contructor
+  Person(this.name, this.gender);
 
-  return text;
+  //second constructor to parse json
+  Person.fromJson(Map<String, String> json)
+      : name = json['name'],
+        gender = json['gender'];
 }
